@@ -1,0 +1,43 @@
+// .chart-container {
+//   display: flex;
+//   flex: 1;
+//   height: 100%;
+//   width: 100%;
+//   canvas {
+//     // max-height: 35vh;
+//     height: inherit;
+//     width: inherit;
+//   }
+//   .google-chart {
+//     // min-height: 35vh;
+//     height: 100%;
+//     width: 100%;
+//     margin: 0 auto !important;
+//     @include flex-center;
+//     & > * {
+//       height: 100%;
+//       width: 100%;
+//       & > * {
+//         &:first-child {
+//           height: 100% !important;
+//           width: 100% !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.chart-container {
+  height: 100%;
+  width: 100%;
+  canvas {
+    max-height: 22vh;
+    height: inherit;
+    width: inherit;
+  }
+  .google-chart {
+    height: 22vh;
+    margin: 0 auto !important;
+    @include flex-center;
+  }
+}

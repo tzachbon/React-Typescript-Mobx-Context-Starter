@@ -1,0 +1,22 @@
+.waves {
+  width: 100%;
+  top: 0;
+  transform: rotate(180deg);
+  /*height: 100%;*/
+  position: absolute;
+  z-index: 0;
+  svg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    animation-name: move-left;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .spacer {
+    height: 100px;
+    width: 100%;
+  }
+}

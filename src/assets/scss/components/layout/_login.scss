@@ -1,0 +1,63 @@
+.is-blocked {
+  margin: 1rem;
+  padding: 1rem;
+  @include flex-center;
+  @include flex-column;
+
+  p {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+
+.logo-img {
+  @include flex-center;
+  margin-bottom: 2rem;
+
+  img {
+    width: 75%;
+  }
+}
+
+.login-with-google {
+  $white: #fff;
+  $google-blue: #4285f4;
+  $button-active-blue: #1669f2;
+  width: 100%;
+  margin: 1rem 0;
+  @include flex-center;
+  cursor: pointer;
+
+  .google-btn {
+    width: 70%;
+    height: 42px;
+    border-radius: 2rem;
+    @include box-shadow-1;
+    @include flex-center;
+    @include transition(0.3s);
+
+    &.loading {
+      @include transition(0.3s);
+      width: auto;
+      animation: spin 1s infinite linear;
+    }
+
+    .google-icon-wrapper {
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 2rem;
+    }
+    .google-icon {
+      margin-top: 11px;
+      margin-left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+    .btn-text {
+      float: right;
+      font-size: 14px;
+    }
+  }
+}

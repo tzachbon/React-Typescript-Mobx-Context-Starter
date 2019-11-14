@@ -1,0 +1,104 @@
+.group-user-container {
+  overflow: hidden;
+  width: 70%;
+  margin: 2rem 0;
+  height: 100%;
+  background-image: linear-gradient(to right top, rgba(#fff, 0.05), rgba(#eee, 0.7));
+  border-radius: 1rem;
+  @include box-shadow-1;
+  @include flex-column;
+
+  .main {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+
+    .user-issues {
+      @include flex-row;
+      align-items: stretch;
+
+      .issue {
+        @include flex-center;
+        @include flex-column;
+        margin: 0 1rem;
+
+        .circle {
+          margin-top: 1rem;
+          @include flex-center;
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+
+          @mixin lg($color-1, $color-2) {
+            transition: all 0.3s linear;
+            background: $color-2;
+            background: linear-gradient(to right, rgba($color-1, 0.5), rgba($color-2, 0.4));
+
+            &:hover {
+              background: linear-gradient(to right, rgba($color-1, 1), rgba($color-2, 1));
+            }
+          }
+
+          &.primary {
+            @include lg(#5b86e5, #36d1dc);
+          }
+
+          &.warn {
+            @include lg(#93291e, #ed213a);
+          }
+
+          &.accent {
+            @include lg(#24243e, #0f0c29);
+          }
+        }
+      }
+    }
+
+    .profile {
+      @include flex-center;
+      width: 25vmin;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      .text {
+        @include flex-column;
+      }
+
+      img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: 0.3rem solid white;
+        margin: 0 2rem;
+        @include transition(0.3s);
+        @include box-shadow-2;
+
+        &:hover {
+          @include box-shadow-3;
+        }
+      }
+
+      .name {
+        margin: 0.4rem 0;
+        font-size: 2.2vmin;
+      }
+
+      .email {
+        font-size: 1.5vmin;
+      }
+    }
+  }
+
+  .issues {
+    .open-issues {
+      cursor: pointer;
+      @include flex-center;
+      @include flex-column;
+      margin: 2rem 1rem;
+
+      mat-icon {
+        margin: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.template-container {
+  width: 100%;
+  height: 100%;
+  // background-image: linear-gradient(120deg, #89f7fe 0%, #83b5ff 100%);
+  background-image: linear-gradient(-120deg, #71c9fc 0%, #98dbfa 100%);
+  position: relative;
+  .template-wrapper {
+    @include abs-center;
+    @include transition(0.5s);
+    @include flex-column;
+    @include flex-center;
+    width: 45rem;
+    min-height: 26rem;
+    background-image: linear-gradient(to top, #ffffff 0%, #fbfbfb 100%);
+    border-radius: 3rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.12);
+  }
+}

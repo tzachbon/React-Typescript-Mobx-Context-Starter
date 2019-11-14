@@ -1,0 +1,158 @@
+.fadein {
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sildeInOut {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+    border-width: 3px;
+  }
+
+  100% {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    border-width: 1px;
+  }
+}
+
+@keyframes obsticaleEffect {
+  0% {
+    background: transparent;
+  }
+
+  50% {
+    background: rgba(249, 142, 141, 0.5);
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes gradientEffect {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -70px;
+  }
+}
+
+@keyframes errorPopup {
+  100% {
+    top: 135px;
+  }
+}
+
+@keyframes bounceArrow {
+  0% {
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+
+  90% {
+    transform: rotate(-90deg) translate3d(5px, 0, 0);
+  }
+
+  95% {
+    transform: rotate(-90deg) translate3d(3px, 0, 0);
+  }
+
+  100% {
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: 5rem;
+  }
+
+  100% {
+    letter-spacing: 2.5rem;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    letter-spacing: 2.5rem;
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    letter-spacing: inherit;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hor {
+  0% {
+    width: calc(100vw - 10rem);
+  }
+
+  100% {
+    width: 30vh;
+  }
+}
+
+@keyframes ver {
+  0% {
+    height: calc(100vh - 10rem);
+  }
+
+  100% {
+    height: 30vh;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin wave-animation($color-1, $color-2) {
+  background: $color-1;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: $color-1;
+  background: linear-gradient(to right, $color-1 8%, $color-2 18%, $color-1 33%);
+  background-size: 200% 100%;
+  height: 96px;
+  position: relative;
+  @keyframes placeHolderShimmer {
+    0% {
+      background-position-x: 100%;
+    }
+    100% {
+      background-position-x: -100%;
+    }
+  }
+}

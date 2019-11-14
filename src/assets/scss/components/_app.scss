@@ -1,0 +1,58 @@
+main {
+  width: 100%;
+  height: 100%;
+  background: $lightgreyColor;
+
+  .navbar {
+    width: 100%;
+    height: $barSize;
+    background: transparent;
+  }
+
+  .main-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - #{$barSize});
+    @include flex-row;
+
+    .sidebar {
+      background: $darkBlueColor;
+      width: $barSize;
+      height: 100%;
+      @include box-shadow-1;
+    }
+
+    .main {
+      width: 100%;
+      height: 100%;
+
+      .chartjsLegend {
+        width: 100%;
+
+        ul {
+          width: inherit;
+          @include flex-row;
+          justify-content: space-around;
+          list-style-type: none;
+          margin: 1rem 0;
+
+          li {
+            font-size: 0.6vmax;
+            span {
+              display: inline-block;
+              width: 12px;
+              height: 12px;
+              margin-right: 5px;
+              border-radius: 25px;
+            }
+          }
+        }
+      }
+
+      .router-container {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

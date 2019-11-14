@@ -1,0 +1,50 @@
+.search-group-sprint-container {
+  width    : 100%;
+  height   : 100%;
+  font-size: 0.7vmax;
+  @include flex-row;
+  padding: 0 2rem;
+
+  .button-container {
+    margin: 0 2rem;
+
+    .button-content {
+      cursor: pointer;
+      @include flex-center;
+    }
+  }
+
+  .search-bar-container {
+    width: 60%;
+
+    .mat-form-field {
+      width: 100%;
+
+      $borderSize: 10rem;
+
+
+      .mat-form-field-suffix {
+        cursor: pointer;
+
+
+      }
+
+      // .mat-form-field-outline-start {
+      //   border-radius: $borderSize;
+      // }
+
+      // .mat-form-field-outline-end {
+      //   // border-radius: 0 $borderSize $borderSize 0;
+      // }
+      // .mat-form-field-outline-start {
+      //   opacity: 0;
+      // }
+      // .mat-form-field-outline-end {
+      //   border-radius   : $borderSize;
+      //   // border-radius: 0 !important;
+      // }
+
+
+    }
+  }
+}

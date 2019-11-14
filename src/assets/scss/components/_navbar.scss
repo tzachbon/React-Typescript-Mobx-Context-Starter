@@ -1,0 +1,30 @@
+.navbar-container {
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 2;
+  @include flex-row;
+
+  .logo-container {
+    background: $color-primary;
+    height: $barSize;
+    width: calc(#{$barSize} - 0.2rem);
+    position: relative;
+    cursor: pointer;
+
+    .logo-icon {
+      @include abs-center;
+      transform: translate(-50%, -55%);
+      width: 100%;
+      vertical-align: middle;
+      text-align: center;
+      color: white;
+      font-size: 3.5rem;
+    }
+  }
+
+  .bread-crumb {
+    height: $barSize;
+    width: auto;
+  }
+}

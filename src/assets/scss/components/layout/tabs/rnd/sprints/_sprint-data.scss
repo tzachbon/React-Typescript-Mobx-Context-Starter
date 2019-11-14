@@ -1,0 +1,23 @@
+.groups-container {
+  width : 100%;
+  height: 100%;
+
+  $searchHeight: 7rem;
+
+  .search-container {
+    height       : $searchHeight;
+    background   : linear-gradient(to bottom, #fff, rgb(248, 248, 248));
+    border-bottom: 0.2rem solid $darkBlueColor;
+  }
+
+  .group-data-container {
+    height    : calc(100% - #{$searchHeight});
+    overflow-y: scroll;
+
+    .mat-accordion {
+      .group {
+        margin: 4.2rem 2rem;
+      }
+    }
+  }
+}

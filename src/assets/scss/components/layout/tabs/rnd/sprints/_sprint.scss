@@ -1,0 +1,55 @@
+.sprint-container {
+  @include transition(0.3s);
+  width: 100%;
+  min-height: 10rem;
+  border-bottom: 0.2rem solid $darkBlueColor;
+  padding: 0 2rem;
+  @include flex-column;
+  overflow: hidden;
+  justify-content: space-between;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.466) 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  cursor: pointer;
+
+  .top-bar {
+    @include flex-row;
+    @include flex-center;
+    justify-content: space-around;
+    padding: 1rem 0.5rem;
+    font-size: 1.1vmin;
+
+    .mat-chip {
+      @include transition(0.3s);
+      @include box-shadow-1;
+      font-size: inherit;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bottom-bar {
+    @include transition(0.5s);
+    @include flex-row;
+    @include flex-center;
+    justify-content: space-around;
+    background: white;
+    color: black;
+    padding: 1rem 0.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.2vmin;
+    justify-content: space-around;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.13);
+  }
+
+  &:hover {
+    transform-origin: left;
+    background-position: left bottom;
+    .bottom-bar {
+      padding: 1.6rem 0.5rem 1rem 0.5rem;
+    }
+  }
+}

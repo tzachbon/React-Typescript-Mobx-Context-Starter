@@ -1,0 +1,33 @@
+.bread-crumb {
+  width: auto;
+  height: 100%;
+  @include flex-center;
+
+  .arrow {
+    opacity: 0.1;
+  }
+
+  .route {
+    @include flex-center;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    background: darken(#fff, 2);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    @include transition(0.3s);
+
+    &.active {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    &:hover {
+      margin: 0;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background: darken(#fff, 3);
+      cursor: pointer;
+    }
+
+    &-title {
+      margin: 0 3rem;
+    }
+  }
+}

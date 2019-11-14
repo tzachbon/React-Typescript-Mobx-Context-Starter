@@ -1,0 +1,40 @@
+.mat-expansion-panel {
+  background: rgb(250, 250, 250);
+  color: $darkBlueColor;
+  box-shadow: 0 1rem 3rem rgba(lighten($darkBlueColor, 10), 0.2);
+  border-radius: 2rem !important;
+
+  .mat-expansion-panel-header {
+    margin: 0.3rem 0;
+  }
+
+  .mat-expansion-panel-header-title,
+  .mat-expansion-indicator,
+  .mat-expansion-indicator::after {
+    color: inherit;
+  }
+
+  .mat-chip {
+    @include transition(0.3s);
+    font-size: 1.3vmin;
+    padding: 1.3rem 1rem;
+    min-height: none;
+    margin: 0 1rem;
+
+    &.mat-chip-selected.mat-primary {
+      color: $darkBlueColor;
+      background: rgba(#62daff, 0.5);
+
+      &:hover {
+        background: rgba(#62daff, 1);
+      }
+    }
+  }
+
+  .mat-expansion-panel-body {
+    .users {
+      @include flex-column;
+      @include flex-center;
+    }
+  }
+}

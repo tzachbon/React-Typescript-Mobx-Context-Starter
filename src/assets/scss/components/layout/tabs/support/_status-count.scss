@@ -1,0 +1,66 @@
+.status-count-container {
+  width: 100%;
+
+  .status-container {
+    // @include flex-row;
+    width: inherit;
+    height: calc(100% - 7rem);
+    margin: 5rem 0 2rem 0;
+    display: flex;
+    flex: 1;
+
+    .status {
+      @include flex-row;
+      justify-content: space-around;
+      @include box-shadow-1;
+
+      background: white;
+      background-size: 200% 100%;
+      position: relative;
+      border-radius: 0.5rem;
+      margin: 0 3rem;
+      padding: 1rem;
+      flex: 1;
+      height: 100%;
+
+      .content {
+        text-align: center;
+        @include flex-column;
+
+        .title,
+        .count {
+          text-align: center;
+          color: #333;
+        }
+
+        .title {
+          font-size: 1.3vmin;
+        }
+        .count {
+          font-size: 3.3vmin;
+        }
+      }
+
+      .icon {
+        position: relative;
+        font-size: 3vmin;
+        background: linear-gradient(to right, darken($color-primary, 0), darken($color-primary, 10));
+        padding: 3rem;
+        height: 4vw;
+        width: 4vw;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        @include flex-center;
+        box-shadow: 0 0 3px rgba(0, 183, 255, 0.3), -5px 0 10px rgb(255, 255, 255), 5px 0 10px rgb(255, 255, 255);
+
+        & > * {
+          transform: translate(-15%, -5%);
+          // @include abs-center;
+          text-align: center;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}

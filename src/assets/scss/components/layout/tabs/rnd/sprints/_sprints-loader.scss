@@ -1,0 +1,72 @@
+.sprints-loader-container {
+  @mixin loader-bg {
+    background: rgba(lighten(whitesmoke, 2), 0.3);
+  }
+  .line-container {
+    flex: 1;
+    @include flex-column;
+    justify-content: center;
+    height: 100%;
+    .line {
+      margin: 1rem 0;
+      height: 2rem;
+      width: auto;
+      border-radius: 0.4rem;
+      @include loader-bg;
+
+      &.big {
+        width: 100%;
+      }
+
+      &.small {
+        width: 60%;
+      }
+    }
+  }
+  .main-sprint {
+    position: relative;
+    @include flex-row;
+
+    &::before {
+      @include wave-animation(rgba(#45b8fa, 0.3), rgba(#67c5fc, 0.2));
+      @include pseudo;
+    }
+
+    .circle-container {
+      flex: 1;
+      width: auto;
+      height: 100%;
+      @include flex-row;
+      justify-content: flex-end;
+
+      .circle {
+        position: relative;
+        @include clearfix;
+        height: 45%;
+        width: 45%;
+        border-radius: 50%;
+        @include loader-bg;
+
+        &::after {
+          @include abs-center;
+          background: #45b8fa;
+          height: 90%;
+          width: 90%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .other-sprints {
+    position: relative;
+
+    &::before {
+      @include wave-animation(rgba(#fff, 0), rgba($lightgreyColor, 0.3));
+      @include pseudo;
+    }
+    height: inherit;
+    width: inherit;
+    overflow-y: scroll;
+  }
+}
