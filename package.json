@@ -1,5 +1,5 @@
 {
-  "name": "React Typescript Mobx Context Starter",
+  "name": "React-Typescript-Mobx-Context-Starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "typescript": "3.7.2"
+    "typescript": "3.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
